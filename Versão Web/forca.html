@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styleForca.css">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <div class="areaJogo esconder">
+        <div class="areaBoneco">
+            <svg class="forca">
+                <line x1="100" y1="50" x2="100" y2="300" style="stroke:rgb(0,0,0);stroke-width:10" />
+                <line x1="95" y1="50" x2="240" y2="50" style="stroke:rgb(0,0,0);stroke-width:10" />
+                <line x1="240" y1="45" x2="240" y2="120" style="stroke:rgb(0,0,0);stroke-width:10" />
+                <circle class="cabeca parte esconder" />
+                <line x1="240" y1="150" x2="240" y2="220" style="stroke:rgb(0,0,0);stroke-width:4" class="corpo parte esconder" />
+                <line x1="240" y1="180" x2="200" y2="200" style="stroke:rgb(0,0,0);stroke-width:4" class="braco-esquerdo parte esconder" />
+                <line x1="240" y1="180" x2="280" y2="200" style="stroke:rgb(0,0,0);stroke-width:4" class="braco-direito parte esconder" />
+                <line x1="240" y1="220" x2="220" y2="260" style="stroke:rgb(0,0,0);stroke-width:4" class="perna-esquerda parte esconder" />
+                <line x1="240" y1="220" x2="260" y2="260" style="stroke:rgb(0,0,0);stroke-width:4" class="perna-direita parte esconder" />
+                
+
+
+                <line x1="250" y1="105" x2="260" y2="125" style="stroke:rgb(255,0,0);stroke-width:4" class="eOlho1 esconder" />
+                <line x1="260" y1="105" x2="250" y2="125" style="stroke:rgb(255,0,0);stroke-width:4" class="eOlho2 esconder" />
+                <line x1="220" y1="105" x2="230" y2="125" style="stroke:rgb(255,0,0);stroke-width:4" class="dOlho1 esconder" />
+                <line x1="230" y1="105" x2="220" y2="125" style="stroke:rgb(255,0,0);stroke-width:4" class="dOlho2 esconder" />
+            </svg>
+        </div>
+        <div class="areaLetras">
+            <div class="modelLetra esconder">
+                <svg width="55" height="5">
+                    <rect width="55" height="5" style="fill:none;stroke-width:10;stroke:rgb(0,0,0)" />
+                </svg>
+            </div>
+            <div class="tema">Tema: Animais</div>    
+            <div class="letras">
+
+            </div>
+            <div class="digite">
+                <form>
+                    <input type="text" id="letraTentada" maxlength="1">
+                    <input type="submit" id="tentarLetra" value="go">
+                </form>
+            </div>
+            <div class="avisos">
+                <div class="winner esconder">
+                    Parabéns você acertou!
+                </div>
+                <div class="looser esconder">
+                    Que pena, vida=false
+                </div>
+                <div class="beUsed esconder">
+                    Letra já utilizada
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button id="novoJogo">Novo Jogo</button>
+    <div class="resultado"></div>
+    <a href="index.html" class="voltar">Voltar</a>
+    <script src="assets/js/velha.js"></script>
+    <script src="assets/js/forca.js"></script>
+</body>
+</html>
